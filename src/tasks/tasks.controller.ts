@@ -46,7 +46,7 @@ export class TasksController {
   updateTaskStatus(
     @Param('id') id: string,
     @Body() updateTaskStatusDto: UpdateTaskStatusDto,
-    @getUser() user: User
+    @getUser() user: User,
   ) {
     const { status } = updateTaskStatusDto;
     return this.taskService.updateTaskStatus(id, status, user);
